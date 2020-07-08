@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@wght@300;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+* {margin:0; padding:0}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    padding: 5vh 5%;
+}
+p {
+    font-size: 1em;
+    text-align: center;
+    padding: 0vh 5% 2vh;
+}
+
+header {
+    width: 100%;
+    height: 12vh;
+    background: #000;
+}
+header h1 {
+    font-family: 'Kalam', cursive;
+    font-size: 4em;
+    font-variant:small-caps;
+    color: #fff;
+    padding-left: 10%;
+}
+#panel01, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border: solid 1px #a6d8a8;
+    margin: auto;
+}
+#panel02, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border: solid 1px cyan;
+    margin: auto;
+}
+.hide01 {
+    display: none;
+}
+.hide {
+    display: none;
+}
+#accordion {
+    display: flex;
+    justify-content: space-evenly;
+}
+#top {
+    width: 100%;
+    height: 100vh;
+    background: url(http://source.unsplash.com/random) center/cover no-repeat;
+}
+
+.hamburger input {
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+}
+.hamburger div{
+    z-index: 1;
+    opacity: 1;
+    position: fixed;
+    top: 12px;
+    right: 18px;
+    font-size: 3em;
+    color: #fff;
+}
+.x {
+    position: fixed;
+    color: #fff;
+    font-size: 2rem;
+    top: 28px;
+    right: 26px;
+    display: none;
+}
+.small-menu {
+    position: fixed;
+    right: -50%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 50%;
+    height: 100vh;
+    transition: right 1s;
+}
+.small-menu a {
+    margin: 18vh 5% 0;
+    display: block;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 4rem;
+}
+.small-menu li {
+    list-style: none;
+}
+.hamburger input:checked~.small-menu {
+    right: -26px;
+}
+.hamburger input:checked~div {
+    display: none;
+}
+.hamburger input:checked~.x {
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+#fudss {
+    margin-top: 100vh;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.show {
+    display: block;
+}
+
+.black{
+    background: #000;
+    color: #ffffff;
+}
+.white{
+    background: #ffffff;
+    color: #000;
+}
+.color{
+    background: gold;
+    color:tomato;
+}
+/*
+
+/*Large Desktop*
+@media (min-width:1200px) {
+    
+}
+/*Normal Desktop*
+@media (min-width:1024px) and (max-width:1199px) {
+    
+}
+/*small desktop*
+@media (min-width:980px) and (max-width:1023px) {
+    
+}
+/*For tablet *
+@media (min-width:768px) and (max-width:979px)  {
+    
+}
+/*For Mobile landscape *
+@media (min-width:480px) and (max-width:767px)  {
+    
+}
+/*For Mobile  *
+@media (min-width:320px) and (max-width:479px)  {
+}
+
